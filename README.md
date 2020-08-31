@@ -3,8 +3,8 @@
 
 ```bash
 sudo apt-get update
-mkdir ${HOME}/project
-cd ${HOME}/project
+mkdir ${HOME}/projects
+cd ${HOME}/projects
 git clone https://github.com/IW276/labor-utils.git
 cd labor-utils
 chmod +x install_cuda.sh
