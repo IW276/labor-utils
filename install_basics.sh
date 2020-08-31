@@ -5,12 +5,12 @@ set -e
 echo "-- Install Updates..."
 sudo apt-get update
 sudo apt-get upgrade -y
-
+sudo apt-get autoremove -y
 echo "-- Install usefull utilies.."
-sed 's/#.*//' xargs -a requirements/apt.txt sudo apt-get install
+sed 's/#.*//' requirements/apt.txt | xargs sudo apt-get install -y
 sudo -H pip3 install -U jetson-stats
 sudo -H pip3 install -U  Cython
-sudo pip3 install numpy matplotlib
+sudo -H pip3 install -U numpy
 #Docker
 sudo cp ${HOME}/project/labor-utils/docker/daemon.json /etc/docker/daemon.json
 # Downdload L4T Pytorch Container 32.4.3
