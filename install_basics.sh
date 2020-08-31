@@ -12,7 +12,7 @@ sudo -H pip3 install -U jetson-stats
 sudo -H pip3 install -U  Cython
 sudo -H pip3 install -U numpy
 #Docker
-sudo cp ${HOME}/project/labor-utils/docker/daemon.json /etc/docker/daemon.json
+sudo cp ${HOME}/projects/labor-utils/docker/daemon.json /etc/docker/daemon.json
 # Downdload L4T Pytorch Container 32.4.3
 sudo docker pull nvcr.io/nvidia/l4t-pytorch:r32.4.3-pth1.6-py3
 
