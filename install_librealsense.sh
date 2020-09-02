@@ -22,8 +22,7 @@ make -j4
 sudo make install
 if ! grep '/usr/local/lib' ${HOME}/.bashrc > /dev/null ; then
   echo "-- Add Librealsense2 Libs into PYTHONPATH in ~/.bashrc"
-  echo >> ${HOME}/.bashrc
-  echo "PYTHONPATH=$PYTHONPATH:/usr/local/lib" >> ${HOME}/.bashrc
+  echo 'export PYTHONPATH=$PYTHONPATH:/usr/local/lib' >> ${HOME}/.bashrc 
 fi
 
 echo "-- Applying udev rules"
